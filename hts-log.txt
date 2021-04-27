@@ -1,0 +1,60 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 26 Apr 2021 15:51:43 at https://www.rapidtables.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qYC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" -Y https://www.rapidtables.com/ -O1 "D:\My Web Sites\test1" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+15:56:02	Error: 	"Not Found" (404) at link https://www.rapidtables.com/web/hosting/index.html (from https://www.rapidtables.com/)
+16:05:20	Error: 	"Not Found" (404) at link https://www.rapidtables.com/tools/filename.txt (from https://www.rapidtables.com/tools/notepad.html)
+16:05:20	Error: 	"Not Found" (404) at link https://www.rapidtables.com/text/file.txt (from https://www.rapidtables.com/text/word-counter.html)
+16:05:20	Error: 	"Not Found" (404) at link https://www.rapidtables.com/pdf/my_image.pdf (from https://www.rapidtables.com/pdf/jpg-to-pdf.html)
+16:06:07	Error: 	"Not Found" (404) at link https://www.rapidtables.com/text/my_image.pdf (from https://www.rapidtables.com/text/ocr.html)
+16:06:07	Error: 	"Not Found" (404) at link https://www.rapidtables.com/text/textscan.txt (from https://www.rapidtables.com/text/ocr.html)
+16:06:55	Error: 	"Not Found" (404) at link https://www.rapidtables.com/calc/math/1/ (from https://www.rapidtables.com/calc/math/Exponent_Calculator.html)
+16:07:53	Error: 	"Not Found" (404) at link https://www.rapidtables.com/lib/fonts/digital-7/digital-7 (mono (from https://www.rapidtables.com/tools/alarm-clock.html)
+16:07:53	Error: 	"Not Found" (404) at link https://www.rapidtables.com/lib/fonts/digital-7/digital-7 (mono italic (from https://www.rapidtables.com/tools/alarm-clock.html)
+16:07:53	Error: 	"Not Found" (404) at link https://www.rapidtables.com/tools/alarm_1.mp3 (from https://www.rapidtables.com/tools/alarm-clock.html)
+16:07:53	Error: 	"Not Found" (404) at link https://www.rapidtables.com/tools/Digital Notification.mp3 (from https://www.rapidtables.com/tools/alarm-clock.html)
+16:07:53	Error: 	"Not Found" (404) at link https://www.rapidtables.com/tools/Alert Notification.wav (from https://www.rapidtables.com/tools/alarm-clock.html)
+16:07:53	Error: 	"Not Found" (404) at link https://www.rapidtables.com/tools/Notification Alarm.mp3 (from https://www.rapidtables.com/tools/alarm-clock.html)
+16:07:53	Error: 	"Not Found" (404) at link https://www.rapidtables.com/tools/Notification.mp3 (from https://www.rapidtables.com/tools/alarm-clock.html)
+16:07:54	Error: 	"Not Found" (404) at link https://www.rapidtables.com/convert/number/binary-output.txt (from https://www.rapidtables.com/convert/number/ascii-to-binary.html)
+16:07:54	Error: 	"Not Found" (404) at link https://www.rapidtables.com/convert/number/hex-output.txt (from https://www.rapidtables.com/convert/number/ascii-to-hex.html)
+16:07:54	Error: 	"Not Found" (404) at link https://www.rapidtables.com/convert/number/text-output.txt (from https://www.rapidtables.com/convert/number/binary-to-ascii.html)
+16:07:57	Warning: 	Retry after error -2 (Receive Time Out) at link pagead2.googlesyndication.com/pagead/js/adsbygoogle.js (from https://www.rapidtables.com/convert/voltage/volt-to-gv.html)
+16:07:58	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
+16:10:37	Error: 	"Not Found on Accelerator" (404) at link https://yui.yahooapis.com/3.7.3/build/yui/yui-min.js (from https://www.rapidtables.com/convert/color/rgb-to-hsl.html)
+16:10:37	Error: 	"Not Found" (404) at link https://www.rapidtables.com/web/tools/file.txt (from https://www.rapidtables.com/web/tools/image-to-base64.html)
+16:10:37	Error: 	"Not Found" (404) at link https://www.rapidtables.com/lib/icons/material/svg/format_underlined_24dp.svg (from https://www.rapidtables.com/tools/screenshot.html)
+16:10:37	Error: 	"Not Found" (404) at link https://www.rapidtables.com/lib/icons/material/svg/format_italic_24dp.svg (from https://www.rapidtables.com/tools/screenshot.html)
+16:10:37	Error: 	"Not Found" (404) at link https://www.rapidtables.com/lib/icons/material/svg/format_bold_24dp.svg (from https://www.rapidtables.com/tools/screenshot.html)
+16:10:37	Error: 	"Not Found" (404) at link https://www.rapidtables.com/web/color/filename.png (from https://www.rapidtables.com/web/color/color-tester.html)
+16:10:37	Error: 	"Not Found" (404) at link https://www.rapidtables.com/web/tools/filename.png (from https://www.rapidtables.com/web/tools/pixel-ruler.html)
+16:10:37	Error: 	"Not Found" (404) at link https://www.rapidtables.com/web/html/link/White flower (from https://www.rapidtables.com/web/html/html-link.html)
+16:10:37	Error: 	"Not Found" (404) at link https://www.rapidtables.com/web/tools/text-out.txt (from https://www.rapidtables.com/web/tools/base64-decode.html)
+16:10:37	Error: 	"Not Found" (404) at link https://www.rapidtables.com/web/tools/hex-out.txt (from https://www.rapidtables.com/web/tools/base64-decode.html)
+16:10:38	Error: 	"Not Found" (404) at link https://www.rapidtables.com/web/tools/bin-out.txt (from https://www.rapidtables.com/web/tools/base64-decode.html)
+16:10:38	Error: 	"Not Found" (404) at link https://www.rapidtables.com/web/tools/base64.txt (from https://www.rapidtables.com/web/tools/base64-encode.html)
+16:10:38	Error: 	"Not Found" (404) at link https://www.rapidtables.com/web/tools/out.txt (from https://www.rapidtables.com/web/tools/base64-to-image.html)
+16:10:38	Error: 	"Not Found" (404) at link https://www.rapidtables.com/web/tools/_html.txt (from https://www.rapidtables.com/web/tools/base64-to-image.html)
+16:10:38	Error: 	"Not Found" (404) at link https://www.rapidtables.com/web/tools/_css.txt (from https://www.rapidtables.com/web/tools/base64-to-image.html)
+16:10:38	Error: 	"Not Found" (404) at link https://www.rapidtables.com/web/tools/filename.html (from https://www.rapidtables.com/web/tools/html-editor.html)
+16:10:38	Error: 	"Not Found" (404) at link https://www.rapidtables.com/web/tools/filename.svg (from https://www.rapidtables.com/web/tools/svg-viewer-editor.html)
+16:10:43	Error: 	"Not Found" (404) at link https://www.rapidtables.com/tools/myimage.png (from https://www.rapidtables.com/tools/camera.html)
+16:12:30	Error: 	"Not Found" (404) at link https://www.rapidtables.com/tools/scatter-plot.svg (from https://www.rapidtables.com/tools/scatter-plot.html)
+16:12:30	Error: 	"Not Found" (404) at link https://www.rapidtables.com/tools/audio/vnd.wav (from https://www.rapidtables.com/tools/voice-recorder.html)
+16:12:32	Error: 	"Not Found" (404) at link https://www.rapidtables.com/code/linux/out.txt (from https://www.rapidtables.com/code/linux/cp.html)
+16:12:32	Error: 	"Not Found" (404) at link https://www.rapidtables.com/code/linux/err.txt (from https://www.rapidtables.com/code/linux/cp.html)
+16:12:32	Error: 	"Not Found" (404) at link https://www.rapidtables.com/code/linux/file1.c file2.c (from https://www.rapidtables.com/code/linux/gcc.html)
+16:12:39	Warning: 	Retry after error -4 (Incorrect length (432328 Bytes, 890008 expected)) at link https://www.rapidtables.com/lib/mathquill-0.10.0/font/Symbola.ttf (from https://www.rapidtables.com/lib/mathquill-0.10.0/mathquill.css)
+16:12:40	Warning: 	Retry after error -4 (Incorrect length (342216 Bytes, 938392 expected)) at link https://www.rapidtables.com/lib/mathquill-0.10.0/font/Symbola.otf (from https://www.rapidtables.com/lib/mathquill-0.10.0/mathquill.css)
+16:12:44	Warning: 	Retry after error -4 (No data (connection closed)) at link https://www.rapidtables.com/lib/mathquill-0.10.0/font/Symbola.svg (from https://www.rapidtables.com/lib/mathquill-0.10.0/mathquill.css)
+16:12:48	Error: 	"Forbidden" (403) at link https://google-developers.appspot.com/maps/documentation/javascript/examples/default.css (from https://www.rapidtables.com/tools/my-location.html)
+16:12:48	Warning: 	Retry after error -2 (Receive Time Out) at link pagead2.googlesyndication.com/pagead/js/adsbygoogle.js (from https://www.rapidtables.com/convert/voltage/volt-to-gv.html)
+16:12:49	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
+16:15:08	Error: 	"Receive Time Out" (-2) after 2 retries at link pagead2.googlesyndication.com/pagead/js/adsbygoogle.js (from https://www.rapidtables.com/convert/voltage/volt-to-gv.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 23 minutes 25 seconds : 2095 links scanned, 2046 files written (26460124 bytes overall) [16601876 bytes received at 11816 bytes/sec], 17224614 bytes transferred using HTTP compression in 1214 files, ratio 27%, 7.0 requests per connection
+(42 errors, 7 warnings, 0 messages)

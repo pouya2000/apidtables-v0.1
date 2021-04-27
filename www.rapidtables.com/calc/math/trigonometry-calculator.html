@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.rapidtables.com/calc/math/trigonometry-calculator.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 26 Apr 2021 11:28:14 GMT -->
+<head>
+<script async src="../../lib/tagmng4.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../lib/rapidz.css">
+<link rel="apple-touch-icon" sizes="180x180" href="../../lib/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="../../lib/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="../../lib/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="../../lib/favicon/manifest.json">
+<link rel="mask-icon" href="../../lib/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="../../lib/favicon/favicon.ico">
+<meta name="msapplication-config" content="/lib/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<meta name="format-detection" content="telephone=no">
+
+<title>Trigonometry calculator</title>
+<meta content="Trigonometric functions calculator." name="description">
+<style>
+
+
+.calc td { font-family:Arial, Helvetica, sans-serif; }
+.calc span { font-size:xx-large; font-family:"Times New Roman", Times, serif; }
+.calc select { font-size:x-large; font-family:"Times New Roman", Times, serif; padding:1px; background:#fff; }
+.calc input { font-size:x-large; font-family:Arial, Helvetica, sans-serif; }
+.calc input[type=text] { width:100%; }
+.calc button { margin:7px auto; }
+/*.calc tr { line-height:40px; }*/
+@media all and (max-width: 576px) {
+	.calc { width:100%; padding:8px; }
+	.calc input[type=number] { width:130px; }
+	#x,#y { width:100%; }
+}
+@media all and (min-width: 577px) {
+	.calc { padding:20px; width:426px; }
+	.calc input[type=number] { width:200px; }
+	.calc input[type=button], .calc input[type=reset] { font-size:large; }
+	#x { width:200px; }
+	#y { width:305px; }
+}
+</style>
+
+</head>
+<body>
+<div id="header">
+<div>
+<div id="logo" class="box">
+<p>
+<a href="../../index.html">RapidTables</a>
+</p>
+</div>
+</div>
+</div>
+<div id="wrapper">
+<div id="nav">
+
+<a href="../../index.html">Home</a>&rsaquo;<a href="../index.html">Calculators</a>&rsaquo;<a href="index.html">Math Calculators</a>&rsaquo; Trigonometry calculator
+
+</div>
+<div id="top-ad">
+
+<ins class="adsbygoogle adslot_1" data-ad-client="ca-pub-5335356106950684" data-ad-slot="6506963100"></ins>
+</div>
+<div id="lcol">
+<div id="doc">
+
+<h1>Trigonometry calculator</h1>
+<h2>Right triangle calculator</h2>
+<p>Enter one side and second value and press the <i>Calculate</i> button:</p>
+<form name="calcform1">
+<table class="calc">
+<tr>
+<td><label for="a">Side a:</label></td>
+<td><input type="number" step="any" id="a" name="a" class="intext" autofocus></td>
+</tr>
+<tr>
+<td><label for="a">Side b:</label></td>
+<td><input type="number" step="any" id="b" name="b" class="intext"></td>
+</tr>
+<tr>
+<td><label for="a">Side c:</label></td>
+<td><input type="number" step="any" id="c" name="c" class="intext"></td>
+</tr>
+<tr>
+<td><label for="a">Angle A:</label></td>
+<td><input type="number" step="any" id="anglea" name="anglea" class="intext"></td>
+<td>
+<select id="degtype1">
+<option selected>&deg;</option>
+<option>rad</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><label for="a">Angle B:</label></td>
+<td><input type="number" step="any" id="angleb" name="angleb" class="intext"></td>
+<td>
+<select id="degtype2">
+<option selected>&deg;</option>
+<option>rad</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td colspan="2">
+<button type="button" title="Calculate" class="btn" onclick="calcright()"><img src="../../lib/icons/glyphicons_all/glyphicons_halflings/glyphicons_halflings_018_cog.png" alt=""> Calculate</button>
+<button type="reset" title="Reset" class="btn"><img src="../../lib/icons/glyphicons_all/glyphicons_halflings/glyphicons_halflings_013_remove.png" alt=""> Reset</button>
+</td>
+</tr>
+</table>
+</form>
+<h2>Trigonometric functions calculator</h2>
+<form name="calcform2">
+<table class="calc">
+<tr>
+<td>
+<select id="func" class="math" onchange="OnFuncChange()">
+<option>sin</option>
+<option>cos</option>
+<option>tan</option>
+<option>csc</option>
+<option>sec</option>
+<option>cot</option>
+<option>arcsin</option>
+<option>arccos</option>
+<option>arctan</option>
+<option>arccsc</option>
+<option>arcsec</option>
+<option>arccot</option>
+</select>
+</td>
+<td><input type="number" step="any" id="x" name="x" class="intext"></td>
+<td id="sel1"><select id="degtype" name="D1" class="math" onchange="OnSelChange()">
+<option selected>&deg;</option>
+<option>rad</option>
+</select></td>
+</tr>
+<tr>
+<td colspan="3">
+<button type="button" title="Calculate" class="btn" onclick="calc()"><img src="../../lib/icons/glyphicons_all/glyphicons_halflings/glyphicons_halflings_018_cog.png" alt=""> Calculate</button>
+<button type="reset" title="Reset" class="btn"><img src="../../lib/icons/glyphicons_all/glyphicons_halflings/glyphicons_halflings_013_remove.png" alt=""> Reset</button>
+</td>
+</tr>
+<tr>
+<td colspan="2">Result:</td>
+</tr>
+<tr>
+<td colspan="2"><input type="text" id="y" name="y" class="outtext" readonly></td>
+<td id="sel2" style="display:none">
+<select id="degtype3" name="D2" onchange="OnSelChange()">
+<option selected>&deg;</option>
+<option>rad</option>
+</select>
+</td>
+</tr>
+</table>
+</form>
+<h2>Trigonometric functions</h2>
+<p class="math">sin <em>A</em> = opposite / hypotenuse = <em>a</em> / <em>c</em></p>
+<p class="math">cos <em>A</em> = adjacent / hypotenuse = <em>b</em> / <em>c</em></p>
+<p class="math">tan <em>A</em> = opposite / adjacent = <em>a</em> / <em>b</em></p>
+<p>&nbsp;</p>
+<p class="math">csc <em>A</em> = hypotenuse / opposite = <em>c</em> / <em>a</em></p>
+<p class="math">sec <em>A</em> = hypotenuse / adjacent = <em>c</em> / <em>b</em></p>
+<p class="math">cot <em>A</em> = adjacent / opposite = <em>b</em> / <em>a</em></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr>
+<h2>See also</h2>
+<ul>
+<li><a href="../../math/trigonometry/index.html">Trigonometric functions</a></li>
+<li><a href="Sin_Calculator.html">Sine calculator</a></li>
+<li><a href="Cos_Calculator.html">Cosine calculator</a></li>
+<li><a href="Tan_Calculator.html">Tangent calculator</a></li>
+<li><a href="Arcsin_Calculator.html">Arcsin calculator</a></li>
+<li><a href="Arccos_Calculator.html">Arccos calculator</a></li>
+<li><a href="Arctan_Calculator.html">Arctan calculator</a></li>
+<li><a href="../../convert/number/degrees-to-radians.html">Degrees to radians conversion</a></li>
+<li><a href="../../convert/number/radians-to-degrees.html">Radians to degrees conversion</a></li>
+<li><a href="../../convert/number/degrees-to-degrees-minutes-seconds.html">Degrees to degrees,minutes,seconds</a></li>
+<li><a href="../../convert/number/degrees-minutes-seconds-to-degrees.html">Degrees,minutes, seconds to degrees</a></li>
+</ul>
+
+<div id="ban-ad">
+<ins class="adsbygoogle adslot_3" data-ad-client="ca-pub-5335356106950684" data-ad-slot="3065550301"></ins>
+</div>
+
+
+</div>
+<div id="fdbk">
+<h2><a id="feedback"></a>Write how to improve this page</h2>
+<form id="fdbkform">
+<textarea id="fdbkarea" rows="4" minlength="30" maxlength="1000" placeholder="Your message ..." required class="form-control"></textarea>
+<span id="fdbkmsg"></span>
+<button type="submit" class="btn btn-secondary" onclick="OnSubFb()">Submit Feedback</button>
+</form>
+</div>
+</div>
+<div id="rcol">
+
+<ins class="adsbygoogle adslot_2" data-ad-client="ca-pub-5335356106950684" data-ad-slot="2437938306"></ins>
+
+<h5>MATH CALCULATORS</h5>
+<ul>
+<li><a href="calculator.html">Online math calculator</a></li>
+<li><a href="adding-fractions-calculator.html">Adding fractions calculator</a></li>
+<li><a href="Add_Calculator.html">Addition calculator</a></li>
+<li><a href="anti-log-calculator.html">Antilog calculator</a></li>
+<li><a href="Arccos_Calculator.html">Arccos calculator</a></li>
+<li><a href="Arcsin_Calculator.html">Arcsin calculator</a></li>
+<li><a href="Arctan_Calculator.html">Arctan calculator</a></li>
+<li><a href="convolution-calculator.html">Convolution calculator</a></li>
+<li><a href="Cos_Calculator.html">Cosine calculator</a></li>
+<li><a href="dividing-fractions-calculator.html">Dividing fractions calculator</a></li>
+<li><a href="division-calculator.html">Division calculator</a></li>
+<li><a href="exponential-growth-calculator.html">Exponential growth calculator</a></li>
+<li><a href="Exponent_Calculator.html">Exponents calculator</a></li>
+<li><a href="Factorial_Calculator.html">Factorial calculator</a></li>
+<li><a href="fractions-calculator.html">Fractions calculator</a></li>
+<li><a href="gcf-calculator.html">GCF calculator</a></li>
+<li><a href="lcm-calculator.html">LCM calculator</a></li>
+<li><a href="Ln_Calc.html">Ln calculator</a></li>
+<li><a href="Log_Calculator.html">Log calculator</a></li>
+<li><a href="multiplication-calculator.html">Multiplication calculator</a></li>
+<li><a href="multiplying-fractions-calculator.html">Multiplying fractions calculator</a></li>
+<li><a href="Percentage_Calculator.html">Percentage calculator</a></li>
+<li><a href="percentage-change-calculator.html">Percentage change calculator</a></li>
+<li><a href="percent-error-calculator.html">Percent error calculator</a></li>
+<li><a href="percentage-increase-calculator.html">Precentage increase calculator</a></li>
+<li><a href="pythagorean-calculator.html">Pythagorean theorem calculator</a></li>
+<li><a href="Quadratic_Calculator.html">Quadratic equation solver</a></li>
+<li><a href="ratio-calculator.html">Ratio calculator</a></li>
+<li><a href="root-calculator.html">Root calculator</a></li>
+<li><a href="scientific-notation-calculator.html">Scientific notation calculator</a></li>
+<li><a href="fraction-simplifier.html">Fraction simplifier</a></li>
+<li><a href="Sin_Calculator.html">Sine calculator</a></li>
+<li><a href="square-root-calculator.html">Square root calculator</a></li>
+<li><a href="standard-deviation-calculator.html">Standard deviation calculator</a></li>
+<li><a href="subtracting-fractions-calculator.html">Subtracting fractions calculator</a></li>
+<li><a href="subtraction-calculator.html">Subtraction calculator</a></li>
+<li><a href="Tan_Calculator.html">Tangent calculator</a></li>
+<li><a href="trigonometry-calculator.html">Trigonometry calculator</a></li>
+<li><a href="weighted-average-calculator.html">Weighted average calculator</a></li>
+<li><a href="variance-calculator.html">Variance calculator</a></li>
+</ul>
+<h5>RAPID TABLES</h5>
+<ul>
+<li><a href="../../about/about.html#link" rel="nofollow">Link to Us</a></li>
+<li><a href="mailto:?subject=RapidTables%20website&body=Please%20checkout%20this%20site:%20https://www.rapidtables.com">Recommend Site</a></li>
+<li><a href="#feedback">Send Feedback</a></li>
+<li><a href="../../about/about.html">About</a></li>
+</ul>
+
+</div>
+</div>
+<div id="footer">
+<a href="../../index-2.html">Home</a> |
+<a href="../../web/index.html">Web</a> |
+<a href="../../math/index.html">Math</a> |
+<a href="../../electric/index.html">Electricity</a> |
+<a href="../index.html">Calculators</a> |
+<a href="../../convert/index.html">Converters</a> |
+<a href="../../tools/index.html">Tools</a>
+<p>&copy;
+<a href="../../index.html">RapidTables.com</a> |
+<a href="../../about/about.html" rel="nofollow">About</a> |
+<a href="../../about/terms.html" rel="nofollow">Terms of Use</a> |
+<a href="../../about/privacy.html" rel="nofollow">Privacy Policy</a> |
+<a href="../../about/cookies.html" rel="nofollow">Manage Cookies</a>
+</p>
+</div>
+<div id="banner">
+<div>
+This website uses cookies to improve your experience, analyze traffic and display ads.
+<a href="../../about/privacy.html">Learn more</a>
+</div>
+<div>
+<a id="banokbtn">OK</a>
+<a id="bansetbtn" href="../../about/cookies.html">Manage Settings</a>
+</div>
+</div>
+
+<script src="../calc2.js"></script>
+<script>
+	function calcright()
+	{
+		var i1 = document.getElementById("degtype1").selectedIndex;
+		var i2 = document.getElementById("degtype2").selectedIndex;
+		var a = document.getElementById("a").value;
+		var b = document.getElementById("b").value;
+		var c = document.getElementById("c").value;
+		var anglea = document.getElementById("anglea").value;
+		var angleb = document.getElementById("angleb").value;
+		//var area = document.getElementById("area").value;
+		if( anglea!="" && i1==0 ) anglea*=Math.PI/180.0;
+		if( angleb!="" && i2==0 ) angleb*=Math.PI/180.0;
+		if( angleb && !anglea ) anglea=Math.PI/2-angleb;
+		if( anglea && !angleb ) angleb=Math.PI/2-anglea;
+		if( a && b ) {
+			c=Math.sqrt(a*a+b*b);
+		}
+		else if( a && c ) {
+			b=Math.sqrt(c*c-a*a);
+		}
+		else if( b && c ) {
+			a=Math.sqrt(c*c-b*b);
+		}
+		else if( a && anglea ) {
+			b=a/Math.tan(anglea);
+			c=Math.sqrt(a*a+b*b);
+		}
+		else if( b && anglea ) {
+			a=b*Math.tan(anglea);
+			c=Math.sqrt(a*a+b*b);
+		}
+		else if( c && anglea ) {
+			a=c*Math.sin(anglea);
+			b=c*Math.cos(anglea);
+		}
+		anglea=Math.atan(a/b);
+		angleb=Math.atan(b/a);
+		if( i1==0 ) anglea*=180.0/Math.PI;
+		if( i2==0 ) angleb*=180.0/Math.PI;
+		document.getElementById("a").value = roundnum(a,6);
+		document.getElementById("b").value = roundnum(b,6);
+		document.getElementById("c").value = roundnum(c,6);
+		document.getElementById("anglea").value = roundnum(anglea,6);
+		document.getElementById("angleb").value = roundnum(angleb,6);
+		//document.getElementById("area").value = area;
+	}
+	function OnFuncChange()
+	{
+		var sel1 = document.getElementById("sel1");
+		var sel2 = document.getElementById("sel2");
+		var i = document.getElementById("func").selectedIndex;
+		if( i<=5 )
+		{
+			sel1.style.display = "";
+			sel2.style.display = "none";
+		}
+		else
+		{
+			sel1.style.display = "none";
+			sel2.style.display = "";
+		}
+	}
+	function OnSelChange()
+	{
+		calc();
+	}
+	function calc()
+	{
+		var i = document.getElementById("func").selectedIndex;
+		var i1 = document.getElementById("degtype").selectedIndex;
+		var i2 = document.getElementById("degtype2").selectedIndex;
+		var x = document.calcform2.x.value;
+		var y;
+		if( i<=5 && i1==0 ) x*=Math.PI/180;
+		if( i==0 ) y = Math.sin(x);
+		else if( i==1 ) y = Math.cos(x);
+		else if( i==2 ) y = Math.tan(x);
+		else if( i==3 ) y = 1/Math.sin(x);
+		else if( i==4 ) y = 1/Math.cos(x);
+		else if( i==5 ) y = 1/Math.tan(x);
+		else if( i==6 ) y = Math.asin(x);
+		else if( i==7 ) y = Math.acos(x);
+		else if( i==8 ) y = Math.atan(x);
+		else if( i==9 ) y = Math.asin(1/x);
+		else if( i==10 ) y = Math.acos(1/x);
+		else y = Math.atan(1/x);
+		if( i>=6 && i2==0 ) y*=180/Math.PI;
+		y = roundnum2(y,8);
+		document.calcform2.y.value = y;
+	}
+</script>
+
+</body>
+
+
+<!-- Mirrored from www.rapidtables.com/calc/math/trigonometry-calculator.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 26 Apr 2021 11:28:14 GMT -->
+</html>

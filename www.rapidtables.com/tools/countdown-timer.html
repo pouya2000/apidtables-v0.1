@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rapidtables.com/tools/countdown-timer.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 26 Apr 2021 11:28:42 GMT -->
+<head>
+<meta charset="utf-8">
+<title>Timer - Online Countdown Timer</title>
+<meta name="description" content="Timer, online countdown timer.">
+<link rel="stylesheet" href="../../ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
+<link rel="icon" type="image/x-icon" href="../lib/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<style>
+	#time { margin-left:auto; margin-right:auto; }
+	/*#time td { text-align:center; }*/
+	#time td  a { margin-left:auto; margin-right:auto; }
+	#buttons { margin-top:8vw; text-align:center; }
+	#b1, #b2 { width:20vw; display:inline-block; }
+	#b1 { background:#b0f6b0; border-color:#8d8; }
+	#b1.green { background:#b0f6b0; border-color:#8d8; }
+	#b1.green:hover { background:#a0e6a0; }
+	#b1.red { background:#f6b0b0; border-color:#d88; }
+	#b1.red:hover { background:#e6a0a0; }
+	#list { max-width:320px; margin:0 auto; }
+	#footer { text-align:center; position:absolute; bottom:-120px; left:0; width:100%; }
+	body { overflow:hidden; }
+	@media all and (max-width: 640px) {
+		#main { margin:5% auto; }
+		#time tr:nth-child(2) td { font-size:16vw; }
+		#buttons { margin-top:8vw; }
+	}
+	@media all and (min-width: 641px) {
+		#main { margin:3% auto; }
+		#time tr:nth-child(2) td { font-size:8vw; }
+		#buttons { margin-top:4vw; }
+	}
+</style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2665076-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2665076-2');
+</script>
+<link rel="stylesheet" type="text/css" href="../../cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="../../cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#f0f0d0",
+      "text": "#333333"
+    },
+    "button": {
+      "background": "#b0b080",
+      "text": "#333"
+    }
+  },
+  "content": {
+    "dismiss": "OK",
+    "message": "This website uses cookies to improve your experience, analyze traffic and display ads.",
+    "href": "https://www.rapidtables.com/about/privacy.html"
+  }
+})});
+</script>
+<script src="../../ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="../../ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+</head>
+<body>
+<div data-role="page" class="ui-responsive-panel">
+<div data-role="header" id="header">
+<a id="barsbtn" href="#toc_panel" data-role="button" data-icon="bars" title="Panel" data-iconpos="notext"></a>
+<h1>Countdown Timer</h1>
+</div>
+<div role="main" class="ui-content" id="main">
+<table id="time">
+<tr>
+<td><a id="upbtn1" href="#" data-role="button" data-icon="carat-u" data-iconpos="notext" title="up"></a></td>
+<td>&nbsp;</td>
+<td><a id="upbtn2" href="#" data-role="button" data-icon="carat-u" data-iconpos="notext" title="up"></a></td>
+<td>&nbsp;</td>
+<td><a id="upbtn3" href="#" data-role="button" data-icon="carat-u" data-iconpos="notext" title="up"></a></td>
+</tr>
+<tr>
+<td id="hours">00</td>
+<td>:</td>
+<td id="minutes">00</td>
+<td>:</td>
+<td id="seconds">00</td>
+</tr>
+<tr>
+<td><a id="dnbtn1" href="#" data-role="button" data-icon="carat-d" data-iconpos="notext" title="down"></a></td>
+<td>&nbsp;</td>
+<td><a id="dnbtn2" href="#" data-role="button" data-icon="carat-d" data-iconpos="notext" title="down"></a></td>
+<td>&nbsp;</td>
+<td><a id="dnbtn3" href="#" data-role="button" data-icon="carat-d" data-iconpos="notext" title="down"></a></td>
+</tr>
+</table>
+<div id="buttons">
+<form>
+<a href="#" id="b1" data-role="button" data-icon="clock" class="green">Start</a>
+<a href="#" id="b2" data-role="button" data-icon="delete">Reset</a>
+</form>
+</div>
+</div>
+<div data-role="footer" id="footer">
+<p>
+<a data-role="button" href="../about/about.html" rel="nofollow">About</a>
+<a data-role="button" href="../about/terms.html" rel="nofollow">Terms of Use</a>
+<a data-role="button" href="../about/privacy.html" rel="nofollow">Privacy Policy</a>
+</p>
+<p>Copyright &copy; <a data-role="button" href="../index.html">RapidTables.com</a></p>
+</div>
+<div data-role="panel" data-display="overlay" data-position="left" data-theme="a" data-dismissible="true" data-swipe-close="true" id="toc_panel">
+<ul data-role="listview">
+<li data-icon="delete"><a href="#header" data-rel="close">Close panel</a></li>
+<li data-icon="home"><a rel="external" href="index.html">Home</a></li>
+<li data-icon="clock"><a href="alarm-clock.html" data-ajax="false">Alarm Clock</a></li>
+<li data-icon="calendar"><a href="calendar.html" data-ajax="false">Calendar</a></li>
+<li data-icon="clock"><a href="countdown-timer.html" data-ajax="false">Countdown Timer</a></li>
+<li data-icon="clock"><a href="current-time.html" data-ajax="false">Current Time</a></li>
+<li data-icon="clock"><a href="stopwatch.html" data-ajax="false">Stopwatch</a></li>
+<li data-icon="calendar"><a href="todays-date.html" data-ajax="false">Today's Date</a></li>
+</ul>
+</div>
+</div>
+<script>
+	var timer;
+	var startTime={'h':0, 'm':0, 's':0};
+	var options = {'delay':1000};
+	
+	$(document).on('pagecreate', function()
+	{
+		$(":jqmData(role='page')").attr("data-title", document.title);
+	    
+	    var Timer = function(viewFunc, options) {
+	    	var interval;
+	    	var clock, set_clock;
+	    	var update_time, prev_update_time;
+	    	var stop_time;
+	    	var state;
+	    	var states={"init":0, "stop":1, "run":2};
+	    	
+			// default options
+			options = options || {};
+			options.delay = options.delay || 1;
+			
+	    	reset();
+	    	
+	    	function start() {
+	    		update_time = prev_update_time = Date.now();
+		    	if( clock<options.delay ) {
+		    		clearInterval(interval);
+					interval = setInterval(update, clock);
+		    	}
+		    	else
+					interval = setInterval(update, options.delay);
+				state = states.run;
+	    	}
+	    	function stop() {
+	    		stop_time = Date.now();
+		    	clearInterval(interval);
+		    	clock-=(stop_time-update_time);
+		    	state = states.stop;
+	    	}
+	    	function reset() {
+		    	clearInterval(interval);
+			    clock = (startTime.h*3600+startTime.m*60+startTime.s)*1000;
+			    stop_time = 0;
+			    state = states.init;
+	    	}
+	    	function getState() {
+			    return state;
+	    	}
+	    	/*
+	    	function getTime() {
+	    		var now = Date.now();
+	    		var time = clock+(now-update_time);
+			    return time;
+	    	}*/
+	    	function update() {
+	    		update_time = Date.now();
+			    //clock+=options.delay;
+			    clock-=update_time-prev_update_time;
+		    	if( clock<options.delay ) {
+		    		clearInterval(interval);
+					interval = setInterval(update, clock);
+		    	}
+			    prev_update_time = update_time;
+			    viewFunc(clock);
+	    	}
+	    	// public api
+	    	this.start = start;
+	    	this.stop = stop;
+	    	this.reset = reset;
+	    	this.getState = getState;
+	    	this.states = states;
+	    	//this.getTime = getTime;
+	    };
+	    
+		function pad(x) {
+			return (x < 10 ? '0' : '') + x;
+		}
+		function vibrate() {
+			navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate; 
+			if (navigator.vibrate) {
+		    	navigator.vibrate([500, 300, 100]);
+		   	}
+		}
+		function playsound() {
+			var file,volume;
+			// get file
+			var filename=['Alarm Clock.mp3','alarm_1.html','Digital%20Notification.html','Alert%20Notification.html','Notification%20Alarm.html','Notification.html','Rooster Crowing.wav'];
+	    	//var i=$("#s8").prop("selectedIndex");
+			file = '/lib/audio/'+filename[2];
+			var audio = new Audio(file);
+			//audio.volume = volume;
+			audio.play();		
+		}
+		
+	    function updateView(clock) {
+	    	var h,m,s;
+			//s = Math.floor((clock+500)/1000);
+			s = Math.ceil(clock/1000);
+			m = Math.floor(s/60);
+			s-=m*60;
+			h = Math.floor(m/60);
+			m-=h*60;
+			if( s==60 ) {
+				s=0;
+				if( ++m==60 ) {
+					m=0;
+					h++;
+				}
+			}
+			h = pad(h);
+			m = pad(m);
+			s = pad(s);
+		    time = h+':'+m+':'+s;
+	    	$("#hours").html(h);
+	    	$("#minutes").html(m);
+	    	$("#seconds").html(s);
+	    	document.title = time;
+	    	//if( h==0 && m==0 && s==0 ) {
+	    	if( clock<=0 ) {
+	    		//$(".ui-content").css('background-color', '#ccc');
+		    	timer.stop();
+				$("#b1").text('...');
+				$("#b1").removeClass("red");
+				$("#b1").addClass("green");
+		    	vibrate();
+		    	playsound();
+		    	setTimeout(function() {
+		    		timer.reset();
+		    		timeView();
+				}, 2000);
+	    	}
+	    }
+	    
+	    timer = new Timer(updateView, options);
+	    
+	    function timeView() {
+			timer.reset();
+	    	$("#hours").html(pad(startTime.h));
+	    	$("#minutes").html(pad(startTime.m));
+	    	$("#seconds").html(pad(startTime.s));
+			$("#b1").text('Start');
+			$("#b1").removeClass("red");
+			$("#b1").addClass("green");
+			$("#upbtn1").css('visibility','visible');
+			$("#upbtn2").css('visibility','visible');
+			$("#upbtn3").css('visibility','visible');
+			$("#dnbtn1").css('visibility','visible');
+			$("#dnbtn2").css('visibility','visible');
+			$("#dnbtn3").css('visibility','visible');
+			document.title = "Timer | Online Countdown Timer";
+	    }
+	    
+	    $("#upbtn1").click(function() {
+	    	if( ++startTime.h==100 ) startTime.h = 0;
+	    	timeView();
+	    });
+	    $("#upbtn2").click(function() {
+	    	if( ++startTime.m==60 ) startTime.m = 0;
+	    	timeView();
+	    });
+	    $("#upbtn3").click(function() {
+	    	if( ++startTime.s==60 ) startTime.s = 0;
+	    	timeView();
+	    });
+	    $("#dnbtn1").click(function() {
+	    	if( --startTime.h<0 ) startTime.h = 99;
+	    	timeView();
+	    });
+	    $("#dnbtn2").click(function() {
+	    	if( --startTime.m<0 ) startTime.m = 59;
+	    	timeView();
+	    });
+	    $("#dnbtn3").click(function() {
+	    	if( --startTime.s<0 ) startTime.s = 59;
+	    	timeView();
+	    });
+	    
+	    $("#b1").click(function() {
+	    	if( timer.getState()==timer.states.init || timer.getState()==timer.states.stop ) {
+	    		if( timer.getState()==timer.states.init && startTime.h==0 && startTime.m==0 && startTime.s==0 ) return;
+		    	timer.start();
+				$("#b1").text('Stop');
+				$("#b1").toggleClass("green");
+				$("#b1").toggleClass("red");
+				$("#upbtn1").css('visibility','hidden');
+				$("#upbtn2").css('visibility','hidden');
+				$("#upbtn3").css('visibility','hidden');
+				$("#dnbtn1").css('visibility','hidden');
+				$("#dnbtn2").css('visibility','hidden');
+				$("#dnbtn3").css('visibility','hidden');
+			}
+	    	else if( timer.getState()==timer.states.run ) {
+		    	timer.stop();
+				$("#b1").text('Continue');
+				$("#b1").toggleClass("red");
+				$("#b1").toggleClass("green");
+		    }
+	    });
+	    
+	    $("#b2").click(function() {
+		    timer.reset();
+			timeView();
+	    });
+	});
+</script>
+</body>
+
+<!-- Mirrored from www.rapidtables.com/tools/countdown-timer.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 26 Apr 2021 11:28:42 GMT -->
+</html>

@@ -1,0 +1,11 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.rapidtables.com	TRUE	/	FALSE	1999999999	__cfduid	da80e04313076a9ad1279d13822136f2e1619436105
+www.rapidtables.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+.bootstrapcdn.com	TRUE	/	FALSE	1999999999	__cfduid	d88c647e3ed88502b07f65376891b58b81619436113
+stackpath.bootstrapcdn.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+.google.com	TRUE	/	FALSE	1999999999	1P_JAR	2021-04-26-11
+.google.com	TRUE	/	FALSE	1999999999	NID	214=hZ6VcQGoGDRJp4j7BTcTYm96oIQtauNYlfdU9BZdITwR1Vf253sUeKj9hpdaBaDMWzIvR61laIUv0n9h6fFo0lZ_TaQMoc_YZviIz4ZmUnqoC2xxNbiZ_QvKEs_G3t61OqiweANsJht0YUC_dJ_7kgDCCFn8c1Fki8XdSTCUMKU
+.datatables.net	TRUE	/	FALSE	1999999999	__cfduid	d4404a1b63c454e9f858bc0afdf82af331619437352
+cdn.datatables.net	TRUE	/	FALSE	1999999999	SameSite	Lax
+

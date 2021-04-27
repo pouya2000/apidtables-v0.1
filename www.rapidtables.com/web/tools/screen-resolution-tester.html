@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rapidtables.com/web/tools/screen-resolution-tester.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 26 Apr 2021 11:32:08 GMT -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Website Screen Resolution Tester</title>
+<meta name="description" content="Website screen resolution display size simulator.">
+<link rel="stylesheet" type="text/css" href="../../rapidtables.css">
+<style>
+	html { 
+		background:#333;
+	}
+	body { 
+		color:#eee;
+		background:#333;
+		padding:20px;
+	}
+	input [type=text] {
+		font-size:17px;
+		padding:8px;
+	}
+	#bread {
+		font-size:14px;
+		margin:0px;
+		padding-bottom:10px;
+	}
+	#bread a {
+		color:#eee;
+		text-decoration:none;
+		padding:5px;
+	}
+	#bread a:hover {
+		color:#fff;
+		background:#000;
+	}
+	.sdiv
+	{
+		display:inline-block;
+		vertical-align:top;
+		margin-left:20px;
+	}
+	.zoom {
+		-webkit-transform: scale(1.0); 
+		-webkit-transform-origin: 0 0; 
+		-moz-transform: scale(1.0); 
+		-moz-transform-origin: 0 0; 
+		-o-transform: scale(1.0); 
+		-o-transform-origin: 0 0; 
+		-ms-transform: scale(1.0); 
+		-ms-transform-origin: 0 0;
+		transform: scale(1.0); 
+		transform-origin: 0 0;
+	}
+	.up { 
+		border:2px outset #fff; 
+		padding:5px;
+		border-radius: 7px 7px 7px 7px;
+		-webkit-border-radius: 7px 7px 7px 7px;
+		border-radius: 7px 7px 7px 7px;
+	}
+	.dn	{ border:2px inset #fff;	
+		padding:5px; 
+		background:#ddd;
+		-moz-border-radius: 7px 7px 7px 7px;
+		-webkit-border-radius: 7px 7px 7px 7px;
+		border-radius: 7px 7px 7px 7px;
+	}
+</style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2665076-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2665076-2');
+</script>
+<link rel="stylesheet" type="text/css" href="../../../cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="../../../cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#f0f0d0",
+      "text": "#333333"
+    },
+    "button": {
+      "background": "#b0b080",
+      "text": "#333"
+    }
+  },
+  "content": {
+    "dismiss": "OK",
+    "message": "This website uses cookies to improve your experience, analyze traffic and display ads.",
+    "href": "https://www.rapidtables.com/about/privacy.html"
+  }
+})});
+</script>
+</head>
+<body>
+<div id="bread" class="sdiv"><a href="../../index.html">Home</a>&rsaquo;<a href="../index.html">Web</a>&rsaquo;<a href="index.html">Tools</a>&rsaquo; Screen resolution tester</div>
+<form name="gen">
+<table>
+<tr>
+<td><input name="txt1" type="text" placeholder="www.rapidtables.com" style="font-size:17px; padding:8px"></td>
+<td><button type="button" name="btn14" title="View" onClick="SetFrameURL()"><img src="../../lib/icons/Toolbar%20Icons/32/magnifier.png" alt="View" /></button></td>
+<td style="padding-left:20px">
+<select id="Select1" onchange="OnZoomChange()" name="D1" style="font-size:16px; padding:8px">
+<option>25%</option>
+<option>50%</option>
+<option>75%</option>
+<option selected>100%</option>
+<option>150%</option>
+<option>200%</option>
+</select>
+</td>
+<td>
+<button type="button" title="Zoom out" onClick="SetZoom(0)"><img src="../../lib/icons/Toolbar%20Icons/32/magnifier_minus_blue.png" alt="Zoom out" /></button>
+<button type="button" title="Zoom in" onClick="SetZoom(1)"><img src="../../lib/icons/Toolbar%20Icons/32/magnifier_plus_blue.png" alt="Zoom in" /></button>
+</td>
+<td style="padding-left:20px">
+<input type="text" value="1024" name="w" style="width:60px; font-size:17px; padding:8px; text-align:center">
+<input type="text" value="768" name="h" style="width:60px; font-size:17px; padding:8px; text-align:center">
+<input type="button" value="Set" title="Set" style="font-size:17px; padding:8px;" onclick="SetFrameSize(null, 0,0 )">
+<input type="button" value="&#8635;" title="Rotate" style="font-size:17px; padding:8px 10px;" onclick="RotateFrame()">
+</td>
+</tr>
+</table>
+<table>
+<tr>
+<td><input type="button" value="320x480" onclick="SetFrameSize(this,320,480)" class="up"></td>
+<td><input type="button" value="320x568" onclick="SetFrameSize(this,320,568)" class="up"></td>
+<td><input type="button" value="720x1280" onclick="SetFrameSize(this,720,1280)" class="up"></td>
+<td><input type="button" value="1024x768" onclick="SetFrameSize(this,1024,768)" class="dn" id="btn1"></td>
+<td><input type="button" value="1280x800" onclick="SetFrameSize(this,1280,800)" class="up"></td>
+<td><input type="button" value="1280x1024" onclick="SetFrameSize(this,1280,1024)" class="up"></td>
+<td><input type="button" value="1366x768" onclick="SetFrameSize(this,1366,768)" class="up"></td>
+<td><input type="button" value="1440x900" onclick="SetFrameSize(this,1440,900)" class="up"></td>
+<td><input type="button" value="1600x900" onclick="SetFrameSize(this,1600,900)" class="up"></td>
+<td><input type="button" value="1680x1050" onclick="SetFrameSize(this,1680,1050)" class="up"></td>
+<td><input type="button" value="1920x1080" onclick="SetFrameSize(this,1920,1080)" class="up"></td>
+<td><input type="button" value="1920x1200" onclick="SetFrameSize(this,1920,1200)" class="up"></td>
+</tr>
+</table>
+</form>
+<div id="dview" style="margin:0px; padding:0px; height:384px;">
+<iframe id="iview" name="iview" class="zoom" style="background:white; width:1024px; height:768px; margin:5px 20px 20px 0px; border-style:none;"></iframe>
+</div>
+</body>
+<script>
+	var on1=document.getElementById("btn1");
+	var w=1024;
+	var h=768;
+	var z=1.0;
+	window.onload = function()
+	{
+		//window.style.zoom = "75%";
+		document.getElementById("Select1").selectedIndex = 3;
+	}
+	function SetFrameURL()
+	{
+		frame = document.getElementById("iview");
+		addr = document.gen.txt1.value;
+		if( addr=="" ) addr="../../index.html";
+		if( addr.substring(0,7)!="http://" ) addr="http://"+addr;
+		frame.src = addr;
+	    frame.style.visibility = "visible";
+	    frame.src = frame.src;
+	}
+	function OnZoomChange()
+	{
+		lut = ['0.25','0.5','0.75','1','1.5','2'];
+		i = document.getElementById("Select1").selectedIndex;
+		zs = lut[i];
+		frame = document.getElementById("iview");
+		frame.style.webkitTransform = 'scale('+zs+')';
+		frame.style.MozTransform 	= 'scale('+zs+')';
+		frame.style.oTransform 		= 'scale('+zs+')';
+		frame.style.msTransform 	= 'scale('+zs+')';
+		z = parseFloat(zs);
+
+		SetDiv();
+	}
+	function SetZoom(d)
+	{
+		lut = ['0.25','0.5','0.75','1','1.5','2'];
+		sel = document.getElementById("Select1");
+		i = sel.selectedIndex;
+		if( d==1 )
+		{
+			if( i<5 ) i++;
+		}
+		else
+		{
+			if( i>0 ) i--;
+		}
+		sel.selectedIndex = i;
+		zs = lut[i];
+		frame = document.getElementById("iview");
+		frame.style.webkitTransform = 'scale('+zs+')';
+		frame.style.MozTransform 	= 'scale('+zs+')';
+		frame.style.oTransform 		= 'scale('+zs+')';
+		frame.style.msTransform 	= 'scale('+zs+')';
+		z = parseFloat(zs);
+
+		SetDiv();
+	}
+	function SetFrameSize(obj,width,height)
+	{
+		if( width=='0' )
+		{
+			width  = document.gen.w.value;
+			height = document.gen.h.value;
+		}
+		
+		w = width;
+		h = height;
+		
+		if( obj!=null )
+			obj.blur();
+		if(obj != on1)  
+		{
+			if( on1!=null ) on1.className = "up";
+			if( obj!=null ) obj.className = "dn";
+			on1 = obj;
+		}
+
+		frame = document.getElementById("iview");
+		frame.style.width = (width)+"px";
+		frame.style.height = (height)+"px";
+		document.gen.w.value = w;
+		document.gen.h.value = h;
+
+		SetDiv();
+	}
+	function RotateFrame()
+	{
+		//w0 = w;
+		//h0 = h;
+		temp = w;
+		w = h;
+		h = temp;
+		frame = document.getElementById("iview");
+		frame.style.width = (w)+"px";
+		frame.style.height = (h)+"px";
+		//dw = (w-w0)/100;
+		//dh = (h-h0)/100;
+		//for(iw=w0,ih=h0; iw!=w; iw+=dw,ih+=dh)
+		//{
+		//	frame.style.width = Math.round(iw)+"px";
+		//	frame.style.height = Math.round(ih)+"px";
+		//}
+		document.gen.w.value = w;
+		document.gen.h.value = h;
+		SetDiv();
+	}
+	function SetDiv()
+	{
+		div = document.getElementById("dview");
+		hh = h*z;
+		y = screen.height/2;
+		if( hh<y ) hh=y;
+		div.style.height = hh+'px';
+	}
+</script>
+
+<!-- Mirrored from www.rapidtables.com/web/tools/screen-resolution-tester.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 26 Apr 2021 11:32:09 GMT -->
+</html>
